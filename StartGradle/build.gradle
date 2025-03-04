@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.10.2'
+}
+
+sourceCompatibility = '21'
+targetCompatibility = '21'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+application {
+    mainClass = 'org.example.ComputerShopMain'
+}
+
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes('Main-Class': 'org.example.ComputerShopMain')
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+dependencies {
+    //testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.12.0'
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.24.3'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.24.3'
+
+    implementation group: 'com.google.guava', name: 'guava', version: '32.0.1-android'
+
+    implementation('org.apache.groovy:groovy:4.0.21')
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+}
+
+test {
+    useJUnitPlatform()
+}
+
