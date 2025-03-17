@@ -1,0 +1,23 @@
+11 Mar 2025 13:51:13,942 INFO  org.example.lab3.CarsDBRepository 19 <init> - Initializing CarsDBRepository with properties: {jdbc.url=jdbc:sqlite:Z:\Faculta\SEM2\mpp\cars.db} 
+11 Mar 2025 13:51:13,954 TRACE org.example.lab3.CarsDBRepository 81 add - Enter Saving element Id=0 Tesla Model S 2019 
+11 Mar 2025 13:51:13,954 TRACE org.example.lab3.JdbcUtils 46 getConnection - Enter
+11 Mar 2025 13:51:13,954 TRACE org.example.lab3.JdbcUtils 23 getNewConnection - Enter
+11 Mar 2025 13:51:13,955 INFO  org.example.lab3.JdbcUtils 28 getNewConnection - trying to connect to database ... jdbc:sqlite:Z:\Faculta\SEM2\mpp\cars.db
+11 Mar 2025 13:51:13,955 INFO  org.example.lab3.JdbcUtils 29 getNewConnection - user: null
+11 Mar 2025 13:51:13,955 INFO  org.example.lab3.JdbcUtils 30 getNewConnection - pass: null
+11 Mar 2025 13:51:14,080 TRACE org.example.lab3.JdbcUtils 55 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2e55dd0c)
+11 Mar 2025 13:51:14,085 TRACE org.example.lab3.CarsDBRepository 88 add - Enter Saved 1 instances
+11 Mar 2025 13:51:14,085 TRACE org.example.lab3.CarsDBRepository 93 add - Exit
+11 Mar 2025 13:51:14,086 TRACE org.example.lab3.CarsDBRepository 116 findAll - Enter Trying to retrieve all cars from db
+11 Mar 2025 13:51:14,086 TRACE org.example.lab3.JdbcUtils 46 getConnection - Enter
+11 Mar 2025 13:51:14,086 TRACE org.example.lab3.JdbcUtils 55 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2e55dd0c)
+11 Mar 2025 13:51:14,086 TRACE org.example.lab3.CarsDBRepository 135 findAll - Exit with([Id=1 Dacia Sandero 2019, Id=2 Skoda Octavia  2005, Id=3 Tesla Model S 2019, Id=8 Tesla Model S 2019])
+11 Mar 2025 13:51:14,087 TRACE org.example.lab3.CarsDBRepository 25 findByManufacturer - Enter Finding cars by manufacturer Tesla
+11 Mar 2025 13:51:14,087 TRACE org.example.lab3.JdbcUtils 46 getConnection - Enter
+11 Mar 2025 13:51:14,087 TRACE org.example.lab3.JdbcUtils 55 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2e55dd0c)
+11 Mar 2025 13:51:14,087 TRACE org.example.lab3.CarsDBRepository 46 findByManufacturer - Exit with([Id=3 Tesla Model S 2019, Id=8 Tesla Model S 2019])
+11 Mar 2025 13:51:14,087 TRACE org.example.lab3.CarsDBRepository 141 delete - Enter Deleting element with id 8 
+11 Mar 2025 13:51:14,087 TRACE org.example.lab3.JdbcUtils 46 getConnection - Enter
+11 Mar 2025 13:51:14,088 TRACE org.example.lab3.JdbcUtils 55 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2e55dd0c)
+11 Mar 2025 13:51:14,090 TRACE org.example.lab3.CarsDBRepository 146 delete - Enter Deleted 1 instances
+11 Mar 2025 13:51:14,090 TRACE org.example.lab3.CarsDBRepository 151 delete - Exit
